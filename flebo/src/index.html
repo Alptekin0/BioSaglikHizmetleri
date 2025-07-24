@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>TAİLWİND</title>
+     <link rel="stylesheet" href="output.css"> <!-- TAİLWİND LİNK -->
+     <script src="https://kit.fontawesome.com/e2f62d2eeb.js" crossorigin="anonymous"></script> <!-- İKON LİNK -->
+     <link href="https://fonts.googleapis.com/css2?family=Recursive&display=swap" rel="stylesheet"> <!-- FONT LİNK -->
+</head>
+
+<body>
+     <header class=""> 
+          <nav class="flex items-center justify-between px-8 h-20 w-full">
+               <div class="text-3xl font-bold">LOGO</div>
+               <!--DESKTOP MENU-->
+               <div class="hidden">
+                    <a href="#ana-sayfa">Ana Sayfa</a>
+                    <a href="#hakkimizda">Hakkımızda</a>
+                    <a href="#urunler">Ürünler</a>
+                    <a href="#iletisim">İletişim</a>
+               </div>
+
+
+               <!--MOBİLE MENU-->
+
+               <div>
+                    <a href="" class="text-2xl"><i><i class="fa-solid fa-bars"></i></i></a>
+               </div>
+
+          </nav>
+     </header>
+
+     <!--ANA SAYFA-->
+     <section id="ana-sayfa" class="relative w-full h-[30rem]">
+          <!-- Arka Plan Resmi -->
+          <img src="medikal-asset/klinik.jpg" alt="Klinik Görseli"
+               class="absolute inset-0 w-full h-full object-cover z-0" />
+
+          <!-- (Opsiyonel) Koyu overlay -->
+          <div class="absolute inset-0 bg-black/40 z-10"></div>
+
+          <!-- Üstteki Yazı -->
+          <div class="relative z-20 flex flex-col items-start justify-end h-full text-white text-center px-5 ">
+               <h1 class="text-3xl font-bold">MARKA</h1>
+               <p class="mt-4 text-lg w-2/3 mb-10">20 yıllık bir tecrübe ile modern bir klinik deneyimine adım atın</p>
+          </div>
+     </section>
+
+
+     <section id="hakkimizda" class="h-screen flex flex-col">
+
+          <div class="flex-1 bg-red-300 flex items-center justify-center">
+               <div class="relative">
+                    <p
+                         class="absolute inset-0 flex items-center justify-center text-white text-2xl font-bold bg-black/40">
+                         HAKKIMIZDA
+                    </p>
+                    <img src="medikal-asset/team2.png" alt="Hakkımızda" class="w-screen h-60 object-cover" />
+               </div>
+          </div>
+
+
+
+          <div class="flex-[2] flex">
+               <div class="w-1/3 bg-blue-300">
+                    Sol Kısım
+               </div>
+               <div class="w-2/3 bg-green-300 flex items-center justify-center">
+                    <div class="text-center flex flex-col items-center justify-center px-6 max-w-xl">
+                         <h2 class="text-2xl font-bold mb-4">I QUİ DİCUMUS.</h2>
+                         <p>
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis vel veniam, ex adipisci
+                              illum
+                              officiis, voluptatem cupiditate dolore voluptates quod harum doloremque asperiores
+                              delectus sed
+                              quae impedit sequi mollitia at.
+                         </p>
+                    </div>
+               </div>
+
+          </div>
+     </section>
+
+
+     <section id="urunler" class="bg-blue-400 h-screen">Ürünler</section>
+     <section id="iletisim" class="bg-orange-500 h-screen">İletişim</section>
+
+
+
+</body>
+
+</html>

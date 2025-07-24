@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+     --font-recursive: 'Recursive', monospace;
+
+     --color-primary: #1E293B;
+     --color-secondary: #38BDF8;
+     --color-accent: #FBBF24;
+}
