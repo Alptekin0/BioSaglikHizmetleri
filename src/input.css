@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+     
+     --font-recursive: 'Recursive', monospace;
+
+     --color-primary: #1E293B;
+     --color-secondary: #2C5F8A;
+     --color-accent: #FBBF24;
+
+
+
+
+
+     /* ANİMASYONLAR */
+     --animate-scrollDown: scrollDown 1.2s infinite;
+
+     @keyframes scrollDown {
+
+          0% {
+               transform: translateX(-50%) translateY(0);
+               opacity: 1;
+          }
+
+          100% {
+               transform: translateX(-50%) translateY(25px);
+               opacity: 0.5;
+          }
+     }
+
+}
