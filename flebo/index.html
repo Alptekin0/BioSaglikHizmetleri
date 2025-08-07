@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>BioDs Sağlık Hizmetleri</title>
+     <link rel="stylesheet" href="output.css"> <!-- TAİLWİND LİNK -->
+     <script src="https://kit.fontawesome.com/e2f62d2eeb.js" crossorigin="anonymous"></script> <!-- İKON LİNK -->
+     <link href="https://fonts.googleapis.com/css2?family=Recursive&display=swap" rel="stylesheet"> <!-- FONT LİNK -->
+     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"> <!-- AOS LİNK -->
+     <link rel="icon" href="medikal-asset/logo.ico" type="image/x-icon"> <!-- FAVİCON -->
+</head>
+
+<body class="overflow-x-hidden font-recursive">
+
+
+     <!--  HEADER  -->
+     <header id="header" class="fixed top-0 left-0 w-full z-50 bg-transparent transition-all duration-300">
+          <nav class="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
+               <!-- Logo (Sol Tarafta) -->
+               <a href="#ana-sayfa" class="z-50">
+                    <img src="medikal-asset/logo.webp" alt="BioDs Logo"
+                         class="h-10 lg:h-12 w-10 lg:w-12 rounded-full object-cover" />
+               </a>
+
+               <!-- Desktop Menü (Ortada ) -->
+               <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 gap-8">
+                    <a href="#ana-sayfa" data-en="Home" class="nav-link relative text-white hover:text-gray-300 text-sm uppercase tracking-wider
+          before:absolute before:bottom-0 before:left-0 
+          before:h-0.5 before:w-0 hover:before:w-full
+          before:bg-white before:transition-all before:duration-300">Ana Sayfa</a>
+                    <a href="#hakkimizda" data-en="About" class="nav-link relative text-white hover:text-gray-300 text-sm uppercase tracking-wider
+          before:absolute before:bottom-0 before:left-0 
+          before:h-0.5 before:w-0 hover:before:w-full
+          before:bg-white before:transition-all before:duration-300">Hakkımızda</a>
+                    <a href="#urunler" data-en="Products" class="nav-link relative text-white hover:text-gray-300 text-sm uppercase tracking-wider
+          before:absolute before:bottom-0 before:left-0 
+          before:h-0.5 before:w-0 hover:before:w-full
+          before:bg-white before:transition-all before:duration-300">Ürünler</a>
+                    <a href="#iletisim" data-en="Contact" class="nav-link relative text-white hover:text-gray-300 text-sm uppercase tracking-wider
+          before:absolute before:bottom-0 before:left-0 
+          before:h-0.5 before:w-0 hover:before:w-full
+          before:bg-white before:transition-all before:duration-300">İletişim</a>
+               </div>
+
+               <!-- Dil Seçici (Sağda) -->
+               <div class="hidden md:block relative">
+                    <button class="langMenuButton text-white hover:text-gray-300 flex items-center gap-1">
+                         <i class="fa-solid fa-globe text-lg"></i>
+                    </button>
+                    <div
+                         class="langMenu hidden absolute right-0 mt-2 w-32 bg-white/90 backdrop-blur-md rounded shadow-lg z-50 overflow-hidden">
+                         <button class="w-full text-left px-4 py-2 text-sm hover:bg-gray-100/50 flex items-center gap-2"
+                              data-lang="tr">
+                              <span>🇹🇷</span>
+                              <span>Türkçe</span>
+                         </button>
+                         <button class="w-full text-left px-4 py-2 text-sm hover:bg-gray-100/50 flex items-center gap-2"
+                              data-lang="en">
+                              <span>🇬🇧</span>
+                              <span>English</span>
+                         </button>
+                    </div>
+               </div>
+
+               <!-- Mobil Menü Butonu (Sağda) -->
+               <div class="md:hidden flex items-center gap-4">
+                    <div class="relative">
+                         <button class="langMenuButton text-white">
+                              <i class="fa-solid fa-globe text-lg"></i>
+                         </button>
+                         <div
+                              class="langMenu hidden absolute right-0 mt-2 w-32 bg-white/90 backdrop-blur-md rounded shadow-lg z-50 overflow-hidden">
+                              <button
+                                   class="w-full text-left px-4 py-2 text-sm hover:bg-gray-100/50 flex items-center gap-2"
+                                   data-lang="tr">
+                                   <span>🇹🇷</span>
+                                   <span>Türkçe</span>
+                              </button>
+                              <button
+                                   class="w-full text-left px-4 py-2 text-sm hover:bg-gray-100/50 flex items-center gap-2"
+                                   data-lang="en">
+                                   <span>🇬🇧</span>
+                                   <span>English</span>
+                              </button>
+                         </div>
+                    </div>
+                    <button class="mobileMenu text-white">
+                         <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+               </div>
+          </nav>
+
+          <!-- alt çizgi -->
+          <div class="absolute bottom-0 left-0 w-full h-px bg-white/20"></div>
+     </header>
+
+     <!-- Mobil Menü (Fullscreen) -->
+     <div
+          class="mobileMenuPanel fixed inset-0 z-40 bg-black/90 backdrop-blur-md hidden flex-col items-center justify-center pt-16 pb-10 px-6">
+          <button class="x-markButton absolute top-[80px] right-10 text-white text-2xl">
+               <i class="fa-solid fa-xmark"></i>
+          </button>
+
+          <div class="pages mt-12 w-full max-w-sm space-y-6 text-center">
+               <a href="#ana-sayfa" class="block text-xl font-light text-white py-3 uppercase tracking-wider"
+                    data-en="Home">Ana Sayfa</a>
+               <a href="#hakkimizda" class="block text-xl font-light text-white py-3 uppercase tracking-wider"
+                    data-en="About">Hakkımızda</a>
+               <a href="#urunler" class="block text-xl font-light text-white py-3 uppercase tracking-wider"
+                    data-en="Product">Ürünler</a>
+               <a href="#iletisim" class="block text-xl font-light text-white py-3 uppercase tracking-wider"
+                    data-en="Contact">İletişim</a>
+          </div>
+
+          <div class="absolute bottom-8 flex gap-4 items-center">
+               <button class="text-white text-sm uppercase tracking-wider flex items-center gap-1" data-lang="tr">
+                    <i class="fa-solid fa-globe"></i>
+                    <span>Türkçe</span>
+               </button>
+               <span class="text-white/50">|</span>
+               <button class="text-white text-sm uppercase tracking-wider flex items-center gap-1" data-lang="en">
+                    <i class="fa-solid fa-globe"></i>
+                    <span>English</span>
+               </button>
+          </div>
+     </div>
+
+
+
+     <!-- MOBİL MENU İCERİK -->
+     <div class="mobileMenuContent z-40">
+          <div
+               class="mobileMenuPanel hidden fixed top-0 right-0 w-[45vw] h-screen bg-black overflow-y-auto z-[100] p-6">
+
+               <div class="space-y-8 p-6">
+
+                    <button class="x-markButton absolute top-6 right-6 text-2xl font-bold text-white">
+                         <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                    <div class="pages flex flex-col items-center justify-center mt-11">
+                         <a href="#ana-sayfa" class="mt-6 text-lg font-bold whitespace-nowrap block py-3 text-white"
+                              data-en="Home">Ana Sayfa</a>
+                         <a href="#hakkimizda" class="mt-6 text-lg font-bold whitespace-nowrap block py-3 text-white"
+                              data-en="About">Hakkımızda</a>
+                         <a href="#urunler" class="mt-6 text-lg font-bold whitespace-nowrap block py-3 text-white"
+                              data-en="Product">Ürünler</a>
+                         <a href="#iletisim" class="mt-6 text-lg font-bold whitespace-nowrap block py-3 text-white"
+                              data-en="Contact">İletişim</a>
+                    </div>
+
+               </div>
+          </div>
+     </div>
+
+
+     <!--ANA SAYFA-->
+     <section id="ana-sayfa" class="relative w-full h-[46rem] md:h-[50rem]  overflow-hidden">
+
+          <!-- Arka Plan Görseli -->
+          <img src="medikal-asset/klinik.webp" alt="Klinik Görseli"
+               class="absolute inset-0 w-full h-full object-cover z-0" />
+
+          <!-- Gölgelendirme: Daha soft gradient overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent z-10"></div>
+
+          <!-- İçerik -->
+          <div class="relative z-20 flex flex-col items-center justify-center h-full text-white text-center px-5">
+
+               <h1 class="text-2xl  font-bold mb-4" data-aos="fade-down" data-en="BioDs Medical Product">
+                    BioDs Sağlık Hizmetleri
+               </h1>
+
+               <p class="text-lg font-medium w-11/12 md:w-2/3 max-w-3xl mx-auto mb-8" data-aos="fade-up"
+                    data-en="Step into a modern clinic experience with 20 years of experience.">
+                    20 yıllık bir tecrübe ile modern bir klinik deneyimine adım atın
+               </p>
+
+               <a href="#hakkimizda"
+                    class="group relative inline-flex items-center justify-center px-8 py-4 overflow-hidden font-semibold text-white transition duration-300 ease-out bg-gradient-to-r from-green-500 via-cyan-700 to-blue-500 rounded-full shadow-lg hover:shadow-2xl hover:scale-105">
+
+                    <!-- Arka ışık efekti -->
+                    <span
+                         class="absolute inset-0 w-full h-full bg-gradient-to-br from-white/20 to-white/0 opacity-0 group-hover:opacity-100 transition duration-500 rounded-full blur-lg">
+                    </span>
+
+                    <!-- Buton yazısı -->
+                    <span class="relative z-10 flex items-center gap-2 text-base" data-en="Discover Our Services">
+                         Hizmetlerimizi Keşfedin
+                         <i
+                              class="fa-solid fa-arrow-right transform transition-transform duration-300 group-hover:translate-x-1"></i>
+                    </span>
+               </a>
+
+
+          </div>
+
+          <!-- SCROLL INDICATOR -->
+          <div id="scrollIndicator"
+               class="hidden absolute bottom-15 left-[87%] -translate-x-1/2 w-[47px] md:w-[57px] h-[80px] md:h-[95px] border-2 border-white rounded-[25px] md:rounded-[30px] z-50">
+               <span class="absolute top-[10px] left-1/2 +translate-x-1/2 w-[30px] md:w-[40px] h-[30px] md:h-[37px] bg-white rounded-full animate-scrollDown"></span>
+          </div>
+
+
+
+     </section>
+
+
+
+     <!--  HAKKIMIZDA  -->
+     <section id="hakkimizda" class="flex flex-col">
+
+          <!-- HAKKIMIZDA BAŞLIK -->
+          <div
+               class="bg-gray-900 flex flex-row items-center justify-between bg-gradient-to-t from-black via-black/50 to-transparent z-10 w-full min-h-[320px] px-4">
+               <!-- Görsel bölümü -->
+               <div class="flex-shrink-0 w-1/3 min-w-[180px] h-60 sm:h-70 relative">
+                    <img src="medikal-asset/team.webp" alt="Hakkımızda"
+                         class="w-full h-full object-cover brightness-75 rounded-md" />
+               </div>
+
+               <!-- Yazı bölümü -->
+               <div class="flex-1 text-white pl-4 py-6 flex flex-col justify-center items-center">
+                    <p class="text-2xl md:text-3xl font-extrabold tracking-wide mb-2 sm:mb-3" data-aos="fade-up">
+                         HAKKIMIZDA
+                    </p>
+               </div>
+          </div>
+
+
+
+
+
+
+
+          <div class="bg-white px-4 sm:px-6 md:px-10 lg:px-20 py-10 text-gray-800">
+               <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                    <div>
+                         <!-- HAKKIMIZDA LOGOSU -->
+                         <img src="medikal-asset/logo.webp" alt="BioDsLogo" class="w-40 md:w-48 mb-6 mr-auto"
+                              data-aos="fade-right" />
+                         <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4 lg:mb-10" data-aos="fade-right"
+                              data-en="BioDs Medical Services">
+                              BioDs Sağlık Hizmetleri
+                         </h2>
+
+                         <!-- HAKKIMIZDA YAZISI -->
+                         <p class="text-base md:text-[18px] leading-relaxed mb-4" data-aos="fade-right"
+                              data-en="We are a biomedical engineering company dedicated to the DAVINCI Robotic Surgical Systems, the world's most advanced endoscopic robotic surgery systems.">
+                              Dünyanın en gelişmiş endoskopik robotik cerrahi sistemleri olan
+                              DAVINCI Robotik Cerrahi Sistemlerine adanmış bir Biomedikal
+                              Mühendislik şirketiyiz.
+                         </p>
+
+                         <p class="text-base md:text-[18px] leading-loose" data-aos="fade-right"
+                              data-en="As a clinic, we are committed to offering the advantages of minimally invasive DAVINCI surgery to more people in the fields of Urology, Gynecology, General Surgery, Thoracic Surgery, and Head & Neck Surgery.
+                              Our sales team, consisting of clinical support and device sales units, operates offices based in Istanbul, with additional offices in Ankara and İzmir. We also provide services through our own sales representatives in Adana, Antalya, and Erzurum.
+                              We manage clinical, sales, and after-sales support services with a highly trained, up-to-date, and internationally certified team equipped with the latest knowledge.">
+                              Klinik olarak Üroloji, Jinekoloji, Genel Cerrahi, Göğüs Cerrahisi
+                              ve Baş Boyun Cerrahisinde minimal invaziv DAVINCI cerrahisinin
+                              avantajlarını daha çok insanımıza sunabilmeyi amaç edindik. Klinik
+                              destek ve ve cihaz satış ekiplerinden oluşan satış kadromuz ile
+                              İstanbul merkez olmak üzere Ankara ve İzmir’de ofislerimiz yer
+                              almakta, Adana, Antalya ve Erzurum’da da kendi satış
+                              temsilcilerimizle hizmet vermekteyiz. Klinik , satış ve satış
+                              sonrası destek hizmetini yüksek eğitimli, güncel bilgi ile
+                              donanmış, uluslararası düzeyde eğitim sertifikalı ekibimiz ile
+                              yönetmekteyiz.
+                         </p>
+                    </div>
+
+
+                    <!-- HAKKIMIZDA FOTOGRAFLARI -->
+                    <div class="flex flex-wrap justify-center gap-4 mt-8 lg:mt-40" data-aos="fade-right">
+
+                         <div class="w-[35%] md:w-40 lg:w-72 aspect-square rounded-2xl overflow-hidden shadow-xl hover:shadow-[0_20px_50px_rgba(59,130,246,0.3)] transition-all duration-500 
+                transform hover:-translate-y-2 border-2 border-white/20 hover:border-blue-300/30
+                bg-gradient-to-br from-blue-50/10 to-indigo-100/10 backdrop-blur-sm">
+                              <img src="medikal-asset/urun/fora.webp" alt="Fora Ateş Ölçer" class="w-full h-full object-contain hover:scale-110 transition-transform duration-500 
+                    filter brightness-95 hover:brightness-105" />
+                         </div>
+
+                         <div class="w-[35%] md:w-40 lg:hidden aspect-square rounded-2xl overflow-hidden 
+                shadow-xl hover:shadow-[0_20px_50px_rgba(59,130,246,0.3)] transition-all duration-500 
+                transform hover:-translate-y-2 border-2 border-white/20 hover:border-blue-300/30
+                bg-gradient-to-br from-blue-50/10 to-indigo-100/10 backdrop-blur-sm">
+                              <img src="medikal-asset/urun/OpenM.webp" alt="ortopedik atel sistemi" class="w-full h-full object-contain hover:scale-110 transition-transform duration-500 
+                    filter brightness-95 hover:brightness-105" />
+                         </div>
+
+                         <div class="w-[35%] md:w-40 lg:hidden aspect-square rounded-2xl overflow-hidden 
+                shadow-xl hover:shadow-[0_20px_50px_rgba(59,130,246,0.3)] transition-all duration-500 
+                transform hover:-translate-y-2 border-2 border-white/20 hover:border-blue-300/30
+                bg-gradient-to-br from-blue-50/10 to-indigo-100/10 backdrop-blur-sm">
+                              <img src="medikal-asset/urun/ezVena.webp" alt="kompresyon teknolojisi" class="w-full h-full object-contain hover:scale-110 transition-transform duration-500 
+                    filter brightness-95 hover:brightness-105" />
+                         </div>
+
+                         <div class="w-[35%] md:w-40 lg:w-72 lg:ml-40 aspect-square rounded-2xl overflow-hidden 
+                shadow-xl hover:shadow-[0_20px_50px_rgba(59,130,246,0.3)] transition-all duration-500 
+                transform hover:-translate-y-2 border-2 border-white/20 hover:border-blue-300/30
+                bg-gradient-to-br from-blue-50/10 to-indigo-100/10 backdrop-blur-sm">
+                              <img src="medikal-asset/urun/phlebo.webp" alt="pnömatik kompresyon sistemi" class="w-full h-full object-contain hover:scale-110 transition-transform duration-500 
+                    filter brightness-95 hover:brightness-105" />
+                         </div>
+
+                    </div>
+
+
+
+               </div>
+
+
+
+               <!-- Misyon -->
+               <div class="mt-12 max-w-5xl mr-auto" data-aos="fade-right">
+                    <h2 class="text-xl md:text-2xl font-bold mb-4">Misyonumuz</h2>
+                    <p class="text-base md:text-[18px] leading-relaxed"
+                         data-en="Our goal is to combine the advanced medical technologies needed by the healthcare sector with high-quality service and after-sales support, and to make them available to the people of our country within the scope of regulations, thereby enhancing both lifespan and quality of life.">
+                         Sağlık sektörünün ihtiyaç duyduğu yüksek medikal teknolojileri, yüksek hizmet ve satış sonrası
+                         destek kalitesiyle birleştirerek regülasyonlar kapsamında ülke insanının kullanımına sunmak ve
+                         bu yolla yaşam süresi ve kalitesini artırmaktır.
+                    </p>
+               </div>
+
+               <!-- Vizyon -->
+               <div class="mt-10 max-w-5xl mr-auto" data-aos="fade-right">
+                    <h2 class="text-xl md:text-2xl font-bold mb-4">Vizyonumuz</h2>
+                    <ul class="list-disc pl-6 space-y-2 text-base md:text-[18px] leading-relaxed">
+                         <li
+                              data-en="To increase the awareness of minimally invasive robotic surgery at the highest standards in our country.">
+                              Minimal invaziv operasyonların en yüksek standartta olan robotik
+                              cerrahinin ülkemizdeki bilinirliğini artırmak.
+                         </li>
+                         <li
+                              data-en="To bring robotic surgery to all locations where minimally invasive operations are performed.">
+                              Minimal invaziv operasyonların yapılabildiği tüm lokasyonlara
+                              robotik cerrahiyi taşımak.
+                         </li>
+                         <li
+                              data-en="To continuously improve and provide system training each year for domestic and international healthcare professionals in order to increase its applicability.">
+                              Uygulanabilirliği arttırmak amacıyla yerli ve yabancı sağlık meslek mensupları için
+                              verilen sistem eğitimlerini her sene geliştirerek devam ettirmek.
+                         </li>
+                         <li data-en="To make the advanced technologies of the future available to all citizens.">
+                              Geleceğin ileri teknolojilerini tüm vatandaşların hizmetine sunmak.
+                         </li>
+                         <li
+                              data-en="To be recognized as a trusted solution partner known for its expertise and ethical values on this path.">
+                              Bu yolda bilgi birikimine güvenilen, etik değerleriyle anılan bir çözüm ortağı olarak
+                              bilinmektir.
+                         </li>
+                    </ul>
+               </div>
+
+
+
+               <!-- KATALOG (MARKALAR) -->
+               <div class="bg-gradient-to-br from-[#1a2a6c] via-[#371818] to-[#1a2a6c] py-20 overflow-hidden mt-12">
+                    <div class="max-w-7xl mx-auto px-6 relative">
+                         <h2 class="text-4xl font-extrabold text-center text-white mb-14">
+                              ÇALIŞTIĞIMIZ
+                              <span
+                                   class="text-transparent bg-clip-text bg-gradient-to-r from-[#ff8a00] to-[#e52e71]">MARKALAR</span>
+                         </h2>
+
+                         <div class="overflow-hidden h-[160px]">
+                              <div class="flex gap-2 animate-marquee whitespace-nowrap w-max"
+                                   style="animation-duration: 20s;">
+                                   <!-- Kartlar (baslangıc) -->
+                                   <div
+                                        class="min-w-[240px] h-[160px] p-6 flex items-center justify-center rounded-3xl border-2 border-gradient-r from-[#ff8a00] to-[#e52e71] transition-transform duration-300 hover:scale-105">
+                                        <img src="medikal-asset/logolar/delphi.webp" alt="Marka 1"
+                                             class="max-h-[120px] w-40 object-contain opacity-80 hover:opacity-100 transition-opacity" />
+                                   </div>
+                                   <div
+                                        class="min-w-[240px] h-[160px] p-6 flex items-center justify-center rounded-3xl border-2 border-gradient-r from-[#ff8a00] to-[#e52e71] transition-transform duration-300 hover:scale-105">
+                                        <img src="medikal-asset/logolar/fora.webp" alt="Marka 2"
+                                             class="max-h-[120px] object-contain opacity-80 hover:opacity-100 transition-opacity" />
+                                   </div>
+                                   <div
+                                        class="min-w-[240px] h-[160px] p-6 flex items-center justify-center rounded-3xl border-2 border-gradient-r from-[#ff8a00] to-[#e52e71] transition-transform duration-300 hover:scale-105">
+                                        <img src="medikal-asset/logolar/OpenCast.webp" alt="Marka 3"
+                                             class="max-h-[120px] object-contain opacity-80 hover:opacity-100 transition-opacity" />
+                                   </div>
+                                   <div
+                                        class="min-w-[240px] h-[160px] p-6 flex items-center justify-center rounded-3xl border-2 border-gradient-r from-[#ff8a00] to-[#e52e71] transition-transform duration-300 hover:scale-105">
+                                        <img src="medikal-asset/logolar/phlebo.webp" alt="Marka 4"
+                                             class="max-h-[120px] object-contain opacity-80 hover:opacity-100 transition-opacity" />
+                                   </div>
+                                   <div
+                                        class="min-w-[240px] h-[160px] p-6 flex items-center justify-center rounded-3xl border-2 border-gradient-r from-[#ff8a00] to-[#e52e71] transition-transform duration-300 hover:scale-105">
+                                        <img src="medikal-asset/logolar/ANT-Neuro.webp" alt="Marka 5"
+                                             class="max-h-[120px] object-contain opacity-80 hover:opacity-100 transition-opacity" />
+                                   </div>
+                                   <div
+                                        class="min-w-[240px] h-[160px] p-6 flex items-center justify-center rounded-3xl border-2 border-gradient-r from-[#ff8a00] to-[#e52e71] transition-transform duration-300 hover:scale-105">
+                                        <img src="medikal-asset/logolar/EF-Medica.webp" alt="Marka 6"
+                                             class="max-h-[80px] object-contain opacity-80 hover:opacity-100 transition-opacity" />
+                                   </div>
+
+                                   <div
+                                        class="min-w-[240px] h-[160px] p-6 flex items-center justify-center rounded-3xl border-2 border-gradient-r from-[#ff8a00] to-[#e52e71] transition-transform duration-300 hover:scale-105">
+                                        <img src="medikal-asset/logolar/Prime-Medikal.webp" alt="Marka 7"
+                                             class="max-h-[120px] object-contain opacity-80 hover:opacity-100 transition-opacity" />
+                                   </div>
+
+                                   <!-- Aynı kartlar tekrar -->
+                                   <div
+                                        class="min-w-[240px] h-[160px] p-6 flex items-center justify-center rounded-3xl border-2 border-gradient-r from-[#ff8a00] to-[#e52e71] transition-transform duration-300 hover:scale-105">
+                                        <img src="medikal-asset/logolar/delphi.webp" alt="Marka 1"
+                                             class="max-h-[120px] w-40 object-contain opacity-80 hover:opacity-100 transition-opacity" />
+                                   </div>
+                                   <div
+                                        class="min-w-[240px] h-[160px] p-6 flex items-center justify-center rounded-3xl border-2 border-gradient-r from-[#ff8a00] to-[#e52e71] transition-transform duration-300 hover:scale-105">
+                                        <img src="medikal-asset/logolar/fora.webp" alt="Marka 2"
+                                             class="max-h-[120px] object-contain opacity-80 hover:opacity-100 transition-opacity" />
+                                   </div>
+                                   <div
+                                        class="min-w-[240px] h-[160px] p-6 flex items-center justify-center rounded-3xl border-2 border-gradient-r from-[#ff8a00] to-[#e52e71] transition-transform duration-300 hover:scale-105">
+                                        <img src="medikal-asset/logolar/OpenCast.webp" alt="Marka 3"
+                                             class="max-h-[120px] object-contain opacity-80 hover:opacity-100 transition-opacity" />
+                                   </div>
+                                   <div
+                                        class="min-w-[240px] h-[160px] p-6 flex items-center justify-center rounded-3xl border-2 border-gradient-r from-[#ff8a00] to-[#e52e71] transition-transform duration-300 hover:scale-105">
+                                        <img src="medikal-asset/logolar/phlebo.webp" alt="Marka 4"
+                                             class="max-h-[120px] object-contain opacity-80 hover:opacity-100 transition-opacity" />
+                                   </div>
+                                   <div
+                                        class="min-w-[240px] h-[160px] p-6 flex items-center justify-center rounded-3xl border-2 border-gradient-r from-[#ff8a00] to-[#e52e71] transition-transform duration-300 hover:scale-105">
+                                        <img src="medikal-asset/logolar/ANT-Neuro.webp" alt="Marka 5"
+                                             class="max-h-[120px] object-contain opacity-80 hover:opacity-100 transition-opacity" />
+                                   </div>
+                                   <div
+                                        class="min-w-[240px] h-[160px] p-6 flex items-center justify-center rounded-3xl border-2 border-gradient-r from-[#ff8a00] to-[#e52e71] transition-transform duration-300 hover:scale-105">
+                                        <img src="medikal-asset/logolar/EF-Medica.webp" alt="Marka 6"
+                                             class="max-h-[80px] object-contain opacity-80 hover:opacity-100 transition-opacity" />
+                                   </div>
+                                   <div
+                                        class="min-w-[240px] h-[160px] p-6 flex items-center justify-center rounded-3xl border-2 border-gradient-r from-[#ff8a00] to-[#e52e71] transition-transform duration-300 hover:scale-105">
+                                        <img src="medikal-asset/logolar/Prime-Medikal.webp" alt="Marka 7"
+                                             class="max-h-[120px] object-contain opacity-80 hover:opacity-100 transition-opacity" />
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+
+
+
+               <!-- RAKAMLAR -->
+               <div class="mt-14 grid grid-cols-1 sm:grid-cols-3 text-center gap-8 text-base font-semibold"
+                    data-aos="fade-right">
+                    <div>
+                         <p class="text-4xl md:text-5xl font-extrabold text-black">6,900+</p>
+                         <p class="mt-2 md:text-xl whitespace-nowrap" data-en="with the robotic surgery system">robotik
+                              cerrahi sistemiyle</p>
+                    </div>
+                    <div>
+                         <p class="text-4xl md:text-5xl font-extrabold text-black">67+</p>
+                         <p class="mt-2 md:text-xl whitespace-nowrap" data-en="in the country">ülkede</p>
+                    </div>
+                    <div>
+                         <p class="text-4xl md:text-5xl font-extrabold text-black">10 m+</p>
+                         <p class="mt-2 md:text-xl whitespace-nowrap" data-en="The surgery was performed">
+                              ameliyat
+                              gerçekleştirildi</p>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+
+
+
+     <!-- URUNLER -->
+     <section id="urunler" class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 bg-gray-50 rounded-xl shadow-inner">
+          <div class="text-center mb-16">
+               <span class="inline-block px-4 py-1 bg-blue-100 text-blue-600 rounded-full text-sm font-semibold mb-3">MEDİKAL
+                    TEKNOLOJİ</span>
+               <h2 class="text-4xl font-bold text-gray-900 mb-4">Yüksek Teknoloji Ürünlerimiz</h2>
+               <p class="text-gray-500 max-w-2xl mx-auto">Sağlık sektörü için son teknoloji çözümlerimizi keşfedin
+               </p>
+          </div>
+
+          <div id="cards-container" class="relative">
+               <button id="scroll-left"
+                    class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -ml-6 z-20 p-4 bg-white text-gray-800 rounded-full shadow-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <i class="fas fa-chevron-left text-xl"></i>
+               </button>
+               <button id="scroll-right"
+                    class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 -mr-6 z-20 p-4 bg-white text-gray-800 rounded-full shadow-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <i class="fas fa-chevron-right text-xl"></i>
+               </button>
+
+               <div id="card-slider"
+                    class="flex overflow-x-scroll scroll-smooth snap-x snap-mandatory space-x-8 pb-6 scrollbar-hide">
+
+                    <!-- ÜRÜN 1 --- PHLEBO  -->
+                    <div
+                         class="card bg-white p-6 rounded-3xl shadow-xl min-w-[320px] sm:min-w-[350px] transition-all duration-500 ease-in-out hover:shadow-2xl hover:scale-[1.02] snap-center">
+
+                         <div class="card-image relative w-full h-48 bg-white rounded-2xl mb-4 overflow-hidden z-30">
+                              <span
+                                   class="absolute top-2 right-0 bg-gradient-to-r from-green-400 to-green-600 text-white text-[14px] font-bold px-3 py-0.5 rounded-lg shadow-md uppercase tracking-wide z-20">
+                                   <i class="fas fa-bolt mr-1"></i> Yeni
+                              </span>
+
+
+                              <img src="medikal-asset/urun/phlebo.webp" alt="Phlebo Press® fotograf"
+                                   class="w-full h-full object-contain transition-transform duration-300 hover:scale-105">
+                         </div>
+
+
+                         <div
+                              class="card-content max-h-48 overflow-hidden transition-all duration-700 ease-in-out space-y-3">
+                              <h3 class="text-2xl font-bold text-gray-900">Mego Afek – Phlebo Press® DVT Sıra Kompresyon
+                                   Cihazı</h3>
+                              <p class="text-gray-700 text-sm leading-relaxed">
+                                   <strong>Phlebo Press DVT cihazı</strong>, derin ven trombozu (DVT) riski altındaki
+                                   hastalarda damar dolaşımını artırmak amacıyla son derece etkin bir pnömatik
+                                   kompresyon sistemi sunar. Hava ile şişen <em>"sleeve"</em> giysiler sayesinde
+                                   yürürken elde edilen bacak kas basıncı simüle edilir, bu sayede venöz dönüş ve
+                                   lenfatik drenaj desteklenir.
+                              </p>
+
+                              <h3 class="font-bold pt-4">Teknik Özellikleri:</h3>
+                              <ul class="list-none p-0 font-sans text-gray-700 space-y-2">
+                                   <li>🔧 601 ve 603 modellerinde 4 odacıklı (sequential) kompresyon</li>
+                                   <li>🔧 45–60 mmHg basınç ayarı</li>
+                                   <li>🔧 Portatif ve masaüstü seçenekleri</li>
+                                   <li>🔧 Bazı modellerde ayak/haluk bölgesi için özel cuff’lar</li>
+                              </ul>
+
+                              <h3 class="font-bold pt-4">Uygulama Alanları:</h3>
+                              <ul class="list-none p-0 font-sans text-gray-700 space-y-2">
+                                   <li>➤ Ameliyat sonrası bakım</li>
+                                   <li>➤ İmmobilizasyon (hareketsizlik durumu)</li>
+                                   <li>➤ Uzun süreli yatak istirahati gerektiren hasta grupları</li>
+                                   <li>➤ Hem bireysel hem hastane ortamında kullanım</li>
+                              </ul>
+
+                              <ul class="pt-7 space-y-2 text-sm text-gray-500">
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        Tek tuşla çalıştırılabilen otomatik sistem
+                                   </li>
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        Görsel ve sesli alarm
+                                   </li>
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        Tek veya çok odacıklı sleeve desteğiyle hasta uyumunu maksimize eder.
+                                   </li>
+                              </ul>
+                         </div>
+                         <div class="mt-4 space-y-3">
+                              <button
+                                   class="toggle-content w-full py-3 px-6 rounded-full font-bold transition-all duration-300 flex items-center justify-center space-x-2 
+                                   bg-gradient-to-r from-teal-400 to-cyan-500 text-white shadow-lg hover:from-teal-500 hover:to-cyan-600 transform hover:scale-105">
+                                   <span>Daha fazla göster</span>
+                                   <i class="fas fa-arrow-down"></i>
+                              </button>
+                              <a href="https://www.megoafek.com/dvt-home" target="_blank"
+                                   class="w-full text-center py-3 px-6 rounded-full font-semibold transition-all duration-300 flex items-center justify-center space-x-2 
+                                      border-2 border-gray-400 text-gray-700 hover:bg-gray-100 hover:border-gray-500 transform hover:scale-105">
+                                   <i class="fas fa-info-circle"></i>
+                                   <span>Daha fazla bilgi al</span>
+                              </a>
+                         </div>
+                    </div>
+
+
+                    <!-- ÜRÜN 2 --- Foracare – IR20 Kulaktan Ateş Ölçer  -->
+                    <div
+                         class="card bg-white p-6 rounded-3xl shadow-xl min-w-[320px] sm:min-w-[350px] transition-all duration-500 ease-in-out hover:shadow-2xl hover:scale-[1.02] snap-center">
+                         <div class="card-image relative w-full h-48 bg-white rounded-2xl mb-4 overflow-hidden">
+                              <span
+                                   class="absolute top-[6px] right-0 bg-gradient-to-r from-orange-400 to-orange-600 text-white text-[14px] font-bold px-3 py-0.5 rounded-lg shadow-md uppercase tracking-wide z-20">
+                                   <i class="fas fa-fire mr-1"></i> Popüler
+                              </span>
+
+                              <img src="medikal-asset/urun/fora.webp"
+                                   alt="Foracare – IR20 Serisi Kulaktan Ateş Ölçer Fotograf"
+                                   class="w-full h-full object-contain transition-transform duration-300 hover:scale-105">
+                         </div>
+                         <div
+                              class="card-content max-h-48 overflow-hidden transition-all duration-700 ease-in-out space-y-3">
+                              <h3 class="text-2xl font-bold text-gray-900">Foracare – IR20 Serisi Kulaktan Ateş Ölçer
+                              </h3>
+                              <p class="text-gray-700 text-sm leading-relaxed">
+                                   <strong> IR20 serisi,</strong> ileri teknoloji IR (infrared) sensörü
+                                   sayesinde sadece 1
+                                   saniyede yüksek doğrulukta sıcaklık ölçümü yapar. ASTM E1965 98
+                                   standardına uygun klinik doğrulukla geliştirilmiştir
+                              </p>
+
+                              <h3 style="margin-top: 20px;" class="font-bold">Antibakteriyel hijyen:
+                              </h3>
+                              <p class="text-gray-700 text-sm leading-relaxed">
+                                   Tek kullanımlık prob kapakları sayesinde
+                                   çapraz bulaşma riski minimum düzeye iner, kapak atım butonuyla kolay
+                                   kullanım sunar
+                              </p>
+
+                              <h3 style="margin-top: 20px" class="font-bold">Teknik Özellikleri:</h3>
+                              <ul
+                                   style="list-style: none; padding-left: 0; font-family: Arial, sans-serif; color: #333;">
+                                   <li style="margin-bottom: 8px;">🔧 10′luk hafıza</li>
+                                   <li style="margin-bottom: 8px;">🔧 AAA pil ile çalışır</li>
+                                   <li style="margin-bottom: 8px;">🔧 ölçüm aralığı 32 °C – 43 °C</li>
+                                   <li style="margin-bottom: 8px;">🔧 ±0.5 °F sapma ile güvenilir
+                                        performans sağlar</li>
+                              </ul>
+
+
+                              <h3 style="margin-top: 20px;" class="font-bold">Uygulama Alanları:</h3>
+                              <ul
+                                   style="list-style: none; padding-left: 0; font-family: Arial, sans-serif; color: #333;">
+                                   <li style="margin-bottom: 8px;">➤ Hem ev hem de klinik ortamlar için
+                                        uygundur; cihaz hafif, taşınabilir ve kullanıcı dostudur. </li>
+                              </ul>
+
+
+                              </p>
+                              <ul class="mt-7 space-y-2 text-sm text-gray-500">
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        Renkli ateş uyarı sistemi (yeşil normal, kırmızı ateş)
+                                   </li>
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        10 ölçümlük hafıza
+                                   </li>
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        LCD arka ışık
+                                   </li>
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        ±0,4 °F doğruluk
+                                   </li>
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        Bluetooth ile mobil uyumluluk
+                                   </li>
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        (IR20b modeli) gibi yenilikçi özellikler içerir
+                                   </li>
+                              </ul>
+                         </div>
+                         <div class="mt-4 space-y-3">
+                              <button
+                                   class="toggle-content w-full py-3 px-6 rounded-full font-bold transition-all duration-300 flex items-center justify-center space-x-2 
+                                   bg-gradient-to-r from-teal-400 to-cyan-500 text-white shadow-lg hover:from-teal-500 hover:to-cyan-600 transform hover:scale-105">
+                                   <span>Daha fazla göster</span>
+                                   <i class="fas fa-arrow-down"></i>
+                              </button>
+                              <a href="https://foracare.com/thermometers/ir20b-fora-ear-thermometers/" target="_blank"
+                                   class="w-full text-center py-3 px-6 rounded-full font-semibold transition-all duration-300 flex items-center justify-center space-x-2 
+                                      border-2 border-gray-400 text-gray-700 hover:bg-gray-100 hover:border-gray-500 transform hover:scale-105">
+                                   <i class="fas fa-info-circle"></i>
+                                   <span>Daha fazla bilgi al</span>
+                              </a>
+                         </div>
+                    </div>
+
+                    <!-- ÜRÜN 3 --- NEO  -->
+                    <div
+                         class="card bg-white p-6 rounded-3xl shadow-xl min-w-[320px] sm:min-w-[350px] transition-all duration-500 ease-in-out hover:shadow-2xl hover:scale-[1.02] snap-center">
+                         <div class="card-image relative w-full h-48 bg-white rounded-2xl mb-4 overflow-hidden">
+
+                              <img src="medikal-asset/urun/neo.webp" alt="nëo™ aEEG Monitör"
+                                   class="w-full h-full object-contain transition-transform duration-300 hover:scale-105">
+                         </div>
+                         <div
+                              class="card-content max-h-48 overflow-hidden transition-all duration-700 ease-in-out space-y-3">
+                              <h3 class="text-2xl font-bold text-gray-900">ANT Neuro – nëo™ aEEG Monitör
+                                   Sistemi</h3>
+                              <p class="text-gray-700 text-sm leading-relaxed">
+                                   nëo™,<strong> yenidoğan yoğun bakım üniteleri
+                                        (NICU) için</strong> özel olarak tasarlanmış, <strong> hem aEEG
+                                        hem gerçek zamanlı EEG
+                                        takibi </strong>sağlayan yüksek kaliteli beyin monitör sistemidir
+                              </p>
+
+                              <h3 style="margin-top: 20px;" class="font-bold">Kanal Esnekliği: </h3>
+                              <p class="text-gray-700 text-sm leading-relaxed">
+                                   2 kanaldan başlayarak maksimum 8 kanal EEG desteği; aynı anda en fazla
+                                   2 kanalda otomatik <strong> nöbet tespiti </strong> özelliği aktif
+                                   olabilir.
+                              </p>
+
+                              <h3 style="margin-top: 20px;" class="font-bold">Kullanıcı Dostu Görev
+                                   Akışı: </h3>
+                              <p class="text-gray-700 text-sm leading-relaxed">
+                                   Elektrodlama, olay notlandırma, veri analizine kadar sade ve hızlı
+                                   kullanım sunar. Grafiksel kullanıcı arayüzü klinik yoğunluğa uygun
+                                   tasarlanmıştır
+                              </p>
+
+
+                              <h3 style="margin-top: 20px;" class="font-bold">Güvenilir Veri Kalitesi:
+                              </h3>
+
+
+                              <p class="text-gray-700 text-sm leading-relaxed">Yüksek giriş empedansı,
+                                   aktif sinyal aracılığı ile artefakt ositasyonu
+                                   azaltılarak güvenli veri kaydı sağlanır; BSR ve IBI trend analizleri
+                                   ile
+                                   tanıya destek olur</p>
+
+                              <ul class="mt-7 space-y-2 text-sm text-gray-500">
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        Elektrodlama
+                                   </li>
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        olay notlandırma
+                                   </li>
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        veri analizine kadar sade ve hızlı kullanım sunar
+                                   </li>
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        Grafiksel kullanıcı arayüzü klinik yoğunluğa uygun
+                                        tasarlanmıştır.
+                                   </li>
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        Bluetooth ile mobil uyumluluk
+                                   </li>
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        (IR20b modeli) gibi yenilikçi özellikler içerir
+                                   </li>
+                              </ul>
+                         </div>
+                         <div class="mt-4 space-y-3">
+                              <button
+                                   class="toggle-content w-full py-3 px-6 rounded-full font-bold transition-all duration-300 flex items-center justify-center space-x-2 
+                                   bg-gradient-to-r from-teal-400 to-cyan-500 text-white shadow-lg hover:from-teal-500 hover:to-cyan-600 transform hover:scale-105">
+                                   <span>Daha fazla göster</span>
+                                   <i class="fas fa-arrow-down"></i>
+                              </button>
+                              <a href="https://www.ant-neuro.com/products/neo" target="_blank"
+                                   class="w-full text-center py-3 px-6 rounded-full font-semibold transition-all duration-300 flex items-center justify-center space-x-2 
+                                      border-2 border-gray-400 text-gray-700 hover:bg-gray-100 hover:border-gray-500 transform hover:scale-105">
+                                   <i class="fas fa-info-circle"></i>
+                                   <span>Daha fazla bilgi al</span>
+                              </a>
+                         </div>
+                    </div>
+
+
+                    <!-- ÜRÜN 4 --Prime Medical Solutions -->
+                    <div
+                         class="card bg-white p-6 rounded-3xl shadow-xl min-w-[320px] sm:min-w-[350px] transition-all duration-500 ease-in-out hover:shadow-2xl hover:scale-[1.02] snap-center">
+                         <div class="card-image relative w-full h-48 bg-white rounded-2xl mb-4 overflow-hidden">
+                              <img src="medikal-asset/urun/ezVena.webp" alt="Lenfödem Cihazları"
+                                   class="w-full h-full object-contain transition-transform duration-300 hover:scale-105">
+                         </div>
+                         <div
+                              class="card-content max-h-48 overflow-hidden transition-all duration-700 ease-in-out space-y-3">
+                              <h3 class="text-2xl font-bold text-gray-900"> Prime Medical Solutions –
+                                   EzVena & EzLymph DVT / Lenfödem Cihazları </h3>
+                              <p class="text-gray-700 text-sm leading-relaxed">
+                                   <strong>EzVena sistemi,</strong> intermittent pnömatik kompresyon
+                                   teknolojisiyle
+                                   derin ven trombozu (DVT) riskini en aza indirmek üzere tasarlanmıştır.
+                                   Hem baldır, hem uyluk hem de ayak cuff seçenekleriyle çeşitli hasta
+                                   profil ve ihtiyaçlarına uygun çözüm sunar. Otomatik “sequential”
+                                   kompresyon ile venöz dönüş hızlandırılır, fibrinolitik aktivite
+                                   tetiklenir. Hastanın konforuna uygun olarak basınç seviyeleri
+                                   ayarlanabilir (örneğin 45–60 mmHg). Kompakt ve çevre dostu tasarım:
+                                   Plastik kullanımını minimum seviyeye çekilerek sürdürülebilir üretim
+                                   hedeflenmiştir. Sağlık personelinin kullanımını kolaylaştıran sezgisel
+                                   kontrol paneli ve alarm sistemleri entegredir. EzLymph versiyonu ise
+                                   lenfödem veya periferik ödemli hastalarda uygun basınca sahip
+                                   çox-odacıklı sleeve’lerle lenf drenajını optimize eder. Yumuşak,
+                                   temizlenebilir kumaş ve ayarlanabilir mmHg değerleri ile hasta
+                                   uyumluluğunu artırır
+                              </p>
+
+
+
+                              <ul class="mt-7 space-y-2 text-sm text-gray-500">
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        Hastanın ev ya da klinik kullanımına uygun, portatif tasarım
+                                   </li>
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        Basınç terapisi ile venöz staz ve ödem kontrolü
+                                   </li>
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        Otomatik alarm sistemi ile güvenlik
+                                   </li>
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        Geniş aksesuar ve sleeve yelpazesi
+                                   </li>
+                              </ul>
+                         </div>
+                         <div class="mt-4 space-y-3">
+                              <button
+                                   class="toggle-content w-full py-3 px-6 rounded-full font-bold transition-all duration-300 flex items-center justify-center space-x-2 
+                                   bg-gradient-to-r from-teal-400 to-cyan-500 text-white shadow-lg hover:from-teal-500 hover:to-cyan-600 transform hover:scale-105">
+                                   <span>Daha fazla göster</span>
+                                   <i class="fas fa-arrow-down"></i>
+                              </button>
+                              <a href="https://www.primemedicalsolutions.eu/en/onze-producten/ezvena/" target="_blank"
+                                   class="w-full text-center py-3 px-6 rounded-full font-semibold transition-all duration-300 flex items-center justify-center space-x-2 
+                                      border-2 border-gray-400 text-gray-700 hover:bg-gray-100 hover:border-gray-500 transform hover:scale-105">
+                                   <i class="fas fa-info-circle"></i>
+                                   <span>Daha fazla bilgi al</span>
+                              </a>
+                         </div>
+                    </div>
+
+
+                    <!-- ÜRÜN 5 -- OpenM  -->
+                    <div
+                         class="card bg-white p-6 rounded-3xl shadow-xl min-w-[320px] sm:min-w-[350px] transition-all duration-500 ease-in-out hover:shadow-2xl hover:scale-[1.02] snap-center">
+                         <div class="card-image relative w-full h-48 bg-white rounded-2xl mb-4 overflow-hidden">
+
+                              <span
+                                   class="absolute top-2 right-0  bg-gradient-to-r from-fuchsia-500 to-pink-600 text-white text-[14px] font-bold px-3 py-0.5 rounded-lg shadow-md uppercase tracking-wide z-20">
+                                   <i class="fas fa-microchip mr-1"></i> Yeni Nesil
+                              </span>
+
+                              <img src="medikal-asset/urun/OpenM.webp" alt="Ortopedik Atel Sistemi"
+                                   class="w-full h-full object-contain transition-transform duration-300 hover:scale-105">
+                         </div>
+                         <div
+                              class="card-content max-h-48 overflow-hidden transition-all duration-700 ease-in-out space-y-3">
+                              <h3 class="text-2xl font-bold text-gray-900"> OpenM – Opencast® Ortopedik
+                                   Atel Sistemi </h3>
+                              <p class="text-gray-700 text-sm leading-relaxed">
+                                   <strong>Opencast®,</strong> geleneksel alçı uygulamalarına yenilikçi
+                                   bir alternatif
+                                   sunan, hafif ve nefes alabilen ortopedik atel sistemidir. Kore
+                                   merkezli OpenM firması tarafından geliştirilen bu ürün, yaralanma
+                                   sonrası sabitleme, kırık yönetimi ve ortopedik rehabilitasyon
+                                   süreçlerinde kullanılmak üzere tasarlanmıştır.
+                              </p>
+
+                              <h3 style="margin-top: 20px" class="font-bold">Öne Çıkan Özellikleri:</h3>
+                              <ul
+                                   style="list-style: none; padding-left: 0; font-family: Arial, sans-serif; color: #333;">
+                                   <li style="margin-bottom: 8px;">🔹 <strong>Açık Yapı
+                                             Tasarımı:</strong> Atel üzerindeki petek yapısı sayesinde
+                                        hava geçirgenliği sağlar, bu da cilt tahrişini ve nem birikimini
+                                        önler.</li>
+                                   <li style="margin-bottom: 8px;">🔹 <strong>Su Geçirmez ve
+                                             Yıkanabilir:</strong> Banyo yapılabilir, enfeksiyon riski
+                                        düşer; hijyenik kullanım imkânı sunar.</li>
+                                   <li style="margin-bottom: 8px;">🔹 <strong>sıtılarak
+                                             Şekillendirilebilir:</strong> Termoplastik materyali
+                                        sayesinde hastaya özel şekil verilebilir, yeniden ısıtılarak
+                                        tekrar kullanılabilir.</li>
+                                   <li style="margin-bottom: 8px;">🔹 <strong>Hafif ve Konforlu:
+                                        </strong> Geleneksel alçılara göre %80’e kadar daha hafiftir,
+                                        çocuk ve yaşlı hastalarda bile rahat kullanım sağlar. </li>
+                              </ul>
+
+                              <h3 style="margin-top: 20px;" class="font-bold">Uygulama Alanları:</h3>
+                              <ul
+                                   style="list-style: none; padding-left: 0; font-family: Arial, sans-serif; color: #333;">
+                                   <li style="margin-bottom: 8px;">➤ El, kol, ayak bileği, diz, dirsek
+                                        gibi bölgelerde kırık ve burkulma sonrası sabitleme </li>
+                                   <li style="margin-bottom: 8px;">➤ Spor yaralanmaları ve tendon/bağ
+                                        sakatlanmaları</li>
+                                   <li style="margin-bottom: 8px;">➤ Ortopedik cerrahi sonrası koruma
+                                   </li>
+                                   <li style="margin-bottom: 8px;">➤ Rehabilitasyon döneminde hareket
+                                        kısıtlamalı destek </li>
+                              </ul>
+
+
+
+                              <ul class="mt-7 space-y-2 text-sm text-gray-500">
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        Açık Yapı Tasarım
+                                   </li>
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        Su Geçirmez ve Yıkanabilir
+                                   </li>
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        Isıtılarak Şekillendirilebilir
+                                   </li>
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        Hafif ve Konforlu
+                                   </li>
+                              </ul>
+                         </div>
+                         <div class="mt-4 space-y-3">
+                              <button
+                                   class="toggle-content w-full py-3 px-6 rounded-full font-bold transition-all duration-300 flex items-center justify-center space-x-2 
+                                   bg-gradient-to-r from-teal-400 to-cyan-500 text-white shadow-lg hover:from-teal-500 hover:to-cyan-600 transform hover:scale-105">
+                                   <span>Daha fazla göster</span>
+                                   <i class="fas fa-arrow-down"></i>
+                              </button>
+                              <a href="http://www.openm.com/?ckattempt=1" target="_blank"
+                                   class="w-full text-center py-3 px-6 rounded-full font-semibold transition-all duration-300 flex items-center justify-center space-x-2 
+                                      border-2 border-gray-400 text-gray-700 hover:bg-gray-100 hover:border-gray-500 transform hover:scale-105">
+                                   <i class="fas fa-info-circle"></i>
+                                   <span>Daha fazla bilgi al</span>
+                              </a>
+                         </div>
+                    </div>
+
+
+                    <!-- ÜRÜN 6 -- QuantalX  – Delphi MD -->
+                    <div
+                         class="card bg-white p-6 rounded-3xl shadow-xl min-w-[320px] sm:min-w-[350px] transition-all duration-500 ease-in-out hover:shadow-2xl hover:scale-[1.02] snap-center">
+                         <div class="card-image relative w-full h-48 bg-white rounded-2xl mb-4 overflow-hidden">
+                              <img src="medikal-asset/urun/delphi.webp" alt="QuantalX – Delphi MD"
+                                   class="w-full h-full object-contain transition-transform duration-300 hover:scale-105">
+                         </div>
+                         <div
+                              class="card-content max-h-48 overflow-hidden transition-all duration-700 ease-in-out space-y-3">
+                              <h3 class="text-2xl font-bold text-gray-900">QuantalX – Delphi MD – Erken
+                                   Tanı İçin Neurodiagnostic Platform</h3>
+                              <p class="text-gray-700 text-sm leading-relaxed">
+                                   <strong>Delphi MD,</strong> nörodejeneratif hastalıkların (Alzheimer,
+                                   Parkinson,
+                                   demans vb.) erken tanısı için geliştirilmiş doğrudan beyin ağlarını
+                                   görüntüleyen bir elektrofizyolojik tarama cihazıdır. Klinik karar
+                                   anında real-time beyin aktivitesi ölçümü sağlar. FDA¬ tarafından
+                                   onaylı/clearance almış olup; longitudinal çalışma verileriyle gerçekçi
+                                   nöropsikiyatrik değerlendirme ve alt tip ayrımı yapabilir. Parkinson
+                                   subtiplerinin elektro-fizyolojik görüntülemesi gibi ileri analiz
+                                   özellikleri sunar. Kullanıcı dostu arayüz, güvenli manyetik
+                                   stimülasyon ve objektif ölçüm sunan sistem yapısı; klinisyenlerin
+                                   erken tanı koyma sürecini sadeleştirir.
+                              </p>
+
+                              <ul class="mt-7 space-y-2 text-sm text-gray-500">
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        Erken ve objektif nörodiferansiyasyon imkanı
+                                   </li>
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        Point of Care (hasta başında) kullanım kolaylığı
+                                   </li>
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        Rejeneratif ve nörodejeneratif hastalık yönetimi süreçlerinde
+                                        klinik öngörü
+                                   </li>
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        Sağlık sistemlerine ekonomik ve klinik avantaj sağlar
+                                   </li>
+                              </ul>
+                         </div>
+                         <div class="mt-4 space-y-3">
+                              <button
+                                   class="toggle-content w-full py-3 px-6 rounded-full font-bold transition-all duration-300 flex items-center justify-center space-x-2 
+                                   bg-gradient-to-r from-teal-400 to-cyan-500 text-white shadow-lg hover:from-teal-500 hover:to-cyan-600 transform hover:scale-105">
+                                   <span>Daha fazla göster</span>
+                                   <i class="fas fa-arrow-down"></i>
+                              </button>
+                              <a href="https://quantalx.com/delphi-md/" target="_blank"
+                                   class="w-full text-center py-3 px-6 rounded-full font-semibold transition-all duration-300 flex items-center justify-center space-x-2 
+                                      border-2 border-gray-400 text-gray-700 hover:bg-gray-100 hover:border-gray-500 transform hover:scale-105">
+                                   <i class="fas fa-info-circle"></i>
+                                   <span>Daha fazla bilgi al</span>
+                              </a>
+                         </div>
+                    </div>
+
+
+                    <!-- ÜRÜN 7 -- EF Medica (İtalya) – ECG / EMG Elektrotları, Jel ve Aksesuarlar -->
+                    <div
+                         class="card bg-white p-6 rounded-3xl shadow-xl min-w-[320px] sm:min-w-[350px] transition-all duration-500 ease-in-out hover:shadow-2xl hover:scale-[1.02] snap-center">
+                         <div class="card-image relative w-full h-48 bg-white rounded-2xl mb-4 overflow-hidden">
+                              <img src="medikal-asset/urun/efMedica.webp"
+                                   alt="ECG / EMG  Elektrotları, Jel ve Aksesuarlar"
+                                   class="w-full h-full object-contain transition-transform duration-300 hover:scale-105">
+                         </div>
+                         <div
+                              class="card-content max-h-48 overflow-hidden transition-all duration-700 ease-in-out space-y-3">
+                              <h3 class="text-2xl font-bold text-gray-900">EF Medica (İtalya) – ECG / EMG
+                                   Elektrotları, Jel ve Aksesuarlar</h3>
+                              <p class="text-gray-700 text-sm leading-relaxed">
+                                   <strong>EF Medica,</strong> 2002’den bu yana Kardiyoloji
+                                   (ECG elektrot, kağıt, kablolar), Defibrilasyon, Ultrason,
+                                   Nörofizyoloji ve Fizyoterapi aksesuarları üreten bir İtalyan markadır.
+                                   Ürünleri dünya genelinde 50’den fazla ülkede kullanılmaktadır.
+                                   Steril, tek kullanımlık ECG elektrotları; neonatal/seni¬or hastalara
+                                   özel farklı boyut ve uzunluktaki kablolar mevcuttur. Holter, stres
+                                   testi, MRI uyumlu versiyonları da bulunur.
+                                   Ultrason jelleri su bazlı, hipoalerjenik ve baloncuk bırakmadan
+                                   görüntü kalitesi sağlar. Defibrilatör pedleri orijinal ve uyumlu
+                                   seçeneklere sahiptir.
+
+                              </p>
+
+                              <ul class="mt-7 space-y-2 text-sm text-gray-500">
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        Geniş ürün gamı ve erişilebilir fiyatlar
+                                   </li>
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        Yüksek enfeksiyon kontrolü ve hasta konforu
+                                   </li>
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        Klinik tıbbi prosedürlerle tam uyumlu
+                                   </li>
+                                   <li class="flex items-center">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        Güçlü distribütör ağı sayesinde hızlı erişim
+                                   </li>
+                              </ul>
+                         </div>
+                         <div class="mt-4 space-y-3">
+                              <button
+                                   class="toggle-content w-full py-3 px-6 rounded-full font-bold transition-all duration-300 flex items-center justify-center space-x-2 
+                                   bg-gradient-to-r from-teal-400 to-cyan-500 text-white shadow-lg hover:from-teal-500 hover:to-cyan-600 transform hover:scale-105">
+                                   <span>Daha fazla göster</span>
+                                   <i class="fas fa-arrow-down"></i>
+                              </button>
+                              <a href="https://www.efmedica.com/" target="_blank"
+                                   class="w-full text-center py-3 px-6 rounded-full font-semibold transition-all duration-300 flex items-center justify-center space-x-2 
+                                      border-2 border-gray-400 text-gray-700 hover:bg-gray-100 hover:border-gray-500 transform hover:scale-105">
+                                   <i class="fas fa-info-circle"></i>
+                                   <span>Daha fazla bilgi al</span>
+                              </a>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <!--  ILETISIM  -->
+     <section id="iletisim" class="flex flex-col mt-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-center text-black mb-8" data-aos="fade-right"
+               data-en="Contact Us">İLETİŞİM</h2>
+          <div class="w-full flex justify-center mb-10">
+               <div class="relative w-[90vw] lg:w-[65rem] pb-[56.25%] lg:pb-0 lg:h-[30rem] overflow-hidden rounded-2xl shadow-lg"
+                    data-aos="fade-right">
+                    <iframe
+                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107377.36263108379!2d29.081040681125923!3d40.99639878475645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac89078137489%3A0x4c3dc10e47e92814!2sSarphan%20Finanspark!5e0!3m2!1str!2str!4v1754418694312!5m2!1str!2str"
+                         class="absolute inset-0 w-full h-full border-0" allowfullscreen="" loading="lazy"
+                         referrerpolicy="no-referrer-when-downgrade"></iframe>
+               </div>
+          </div>
+
+
+          <!-- formbilgisi -->
+          <section class="w-full max-w-6xl mx-auto px-4 md:px-8 py-12">
+               <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
+
+                    <!-- Form -->
+                    <div class="bg-black rounded-2xl shadow-lg p-6 md:p-8 flex flex-col justify-center w-full"
+                         data-aos="fade-right">
+                         <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 text-white"
+                              data-en="Contact Us">
+                              İletişime Geçin
+                         </h2>
+                         <form class="space-y-4 md:space-y-5">
+                              <input type="text" placeholder="Adınız ve Soyadınız" required
+                                   class="w-full rounded-full border border-gray-700 bg-[#181818] px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-400 text-gray-100 placeholder-gray-400"
+                                   data-en="Full Name..." />
+                              <input type="text" placeholder="Mesajın Konusu" required
+                                   class="w-full rounded-full border border-gray-700 bg-[#181818] px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-400 text-gray-100 placeholder-gray-400"
+                                   data-en="Subject..." />
+                              <input type="email" placeholder="E-posta Adresiniz" required
+                                   class="w-full rounded-full border border-gray-700 bg-[#181818] px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-400 text-gray-100 placeholder-gray-400"
+                                   data-en="Mail.." />
+                              <textarea placeholder="Mesajınızı buraya yazınız..." rows="4" required
+                                   class="w-full rounded-2xl border border-gray-700 bg-[#181818] px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gray-400 text-gray-100 placeholder-gray-400 resize-none"
+                                   data-en="Your Message Here..."></textarea>
+                              <button type="submit"
+                                   class="w-full md:w-48 mt-4 md:mt-6 rounded-full bg-gray-200 hover:bg-gray-400 text-black font-semibold px-6 py-3 transition-colors"
+                                   data-en="Submit">
+                                   Mesajı Gönder
+                              </button>
+                         </form>
+                    </div>
+
+                    <!-- İletişim Bilgisi -->
+                    <div class="flex flex-col items-center justify-center gap-6 md:gap-8 w-full" data-aos="fade-left">
+                         <div class="space-y-6 w-full lg:ml-12">
+                              <div class="flex items-center gap-3">
+                                   <span class="text-3xl text-black">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                   </span>
+                                   <div class="text-base md:text-lg text-black leading-tight">
+                                        Finanskent mah finans caddesi <br>
+                                        sarphan finans park c blok no:5c kat:4 no:83 <br />
+                                        İstanbul/Ümraniye, Türkiye<br />
+                                   </div>
+                              </div>
+                              <div class="flex items-center gap-3">
+                                   <span class="text-3xl text-black">
+                                        <i class="fa-solid fa-envelope"></i>
+                                   </span>
+                                   <span class="text-base md:text-lg text-black">
+                                        info@biosaglik.com.tr
+                                   </span>
+                              </div>
+                              <div class="flex items-center gap-3">
+                                   <span class="text-3xl text-black">
+                                        <i class="fa-solid fa-fax"></i>
+                                   </span>
+                                   <span class="text-base md:text-lg text-black">
+                                        +90 533 437 30 41
+                                   </span>
+                              </div>
+                              <div class="flex items-center gap-3">
+                                   <span class="text-3xl text-black">
+                                        <i class="fa-solid fa-phone"></i>
+                                   </span>
+                                   <span class="text-base md:text-lg text-black">
+                                        +90 544 334 27 96
+                                   </span>
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+          </section>
+
+     </section>
+
+     <section>
+          <footer class="bg-zinc-900 text-white text-sm">
+               <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                    <!-- Logo ve Açıklama -->
+                    <div>
+                         <img src="medikal-asset/logo.webp" alt="BioDs Logo" class="h-15 w-15 mb-4">
+                         <p class="text-gray-400 leading-relaxed">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus atque quis odio nulla
+                              cupiditate ipsa. Quas velit totam doloribus doloremque reprehenderit quisquam rerum iure
+                              voluptate.
+                         </p>
+                    </div>
+
+                    <!-- İletişim -->
+                    <div>
+                         <h3 class="font-bold mb-2">Bize Ulaşın</h3>
+                         <p class="text-gray-400 whitespace-nowrap">
+                              Finanskent mah finans caddesi <br>
+                              sarphan finans park c blok no:5c kat:4 no:83 <br>
+                              İstanbul/Ümraniye, Türkiye<br> <br>
+
+                              Telefon : +90 533 437 30 41 / +90 544 334 27 96 <br> <br>
+
+
+                              Mail : info@biosaglik.com.tr
+
+                         </p>
+                    </div>
+
+                    <!-- Sistemler -->
+                    <div class="lg:ml-[90px]  whitespace-nowrap">
+                         <h3 class="font-bold mb-2 ">Sistemler</h3>
+                         <ul class="text-gray-400 space-y-1">
+                              <li> ➤ Phlebo Press® DVT Sıra Kompresyon Cihazı</li>
+                              <li> ➤ IR20 Serisi Kulaktan Ateş Ölçer</li>
+                              <li> ➤ nëo™ aEEG Monitör Sistemi</li>
+                              <li> ➤ EzVena & EzLymph DVT / Lenfödem Cihazları</li>
+                              <li> ➤ Opencast® Ortopedik Atel Sistemi</li>
+                              <li> ➤ Erken Tanı İçin Neurodiagnostic Platform</li>
+                              <li> ➤ ECG / EMG Elektrotları, Jel ve Aksesuarlar</li>
+                         </ul>
+                    </div>
+
+                    <!-- Hızlı Menü -->
+                    <div class="lg:ml-40 whitespace-nowrap">
+                         <h3 class="font-bold mb-2">Hızlı Menü</h3>
+                         <ul class="text-gray-400 space-y-1">
+                              <li><a href="#ana-sayfa" class="hover:underline">Ana Sayfa</a></li>
+                              <li><a href="#hakkimizda" class="hover:underline">Hakkımızda</a></li>
+                              <li><a href="#urunler" class="hover:underline">Ürünler</a></li>
+                              <li><a href="#iletisim" class="hover:underline">İletişim</a></li>
+                         </ul>
+                         <h3 class="mt-10">Created By:</h3>
+                         <a href="https://github.com/merayes" target="_blank"
+                              class="text-gray-400  hover:underline">merayes</a> <br>
+                         <a href="https://github.com/Alptekin0" target="_blank"
+                              class="text-gray-400 hover:underline">Alptekin0</a>
+                    </div>
+
+                    <div>
+
+                    </div>
+               </div>
+
+               <!-- Alt Kısım -->
+               <div class="bg-black text-center text-gray-400 py-4 text-xs">
+                    © 2025 BioDs. Tüm Hakları Saklıdır.
+               </div>
+          </footer>
+
+
+
+     </section>
+
+
+
+     <script src="app.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+     <script>  AOS.init({
+               duration: 800,   // Tüm animasyonların varsayılan süresi (ms)
+               delay: 0,        // Varsayılan gecikme süresi
+               once: true       // Sadece bir kez animasyon oynasın
+          });</script>
+</body>
+
+</html>

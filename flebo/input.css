@@ -3,19 +3,15 @@
 
 
 @theme {
-     
+
      --font-recursive: 'Recursive', monospace;
-
-     --color-primary: #1E293B;
-     --color-secondary: #2C5F8A;
-     --color-accent: #FBBF24;
-
 
 
 
 
      /* ANİMASYONLAR */
      --animate-scrollDown: scrollDown 1.2s infinite;
+     --animate-marquee: marquee 20s linear infinite;
 
      @keyframes scrollDown {
 
@@ -29,5 +25,18 @@
                opacity: 0.5;
           }
      }
+
+     @keyframes marquee {
+          0% {
+               transform: translateX(0%);
+          }
+
+          100% {
+               transform: translateX(-50%);
+          }
+     }
+
+
+
 
 }
