@@ -1,4 +1,4 @@
-# [Bio Sağlık Hizmetleri Web Sitesi]
+# Bio Sağlık Hizmetleri Web Sitesi
 
 Bu proje, Bio Sağlık Hizmetleri'nın dijital kimliğini temsil eden, profesyonel ve modern bir web sitesidir. Kullanıcı dostu arayüzü sayesinde, müşterilerin hizmetler hakkında bilgi almasını, iletişim kurmasını ve randevu talep etmesini kolaylaştırır.
 
