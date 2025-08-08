@@ -125,12 +125,12 @@ document.addEventListener('DOMContentLoaded', () => {
       // max-h sınıfını kaldırıp ekleyerek animasyonu tetikleme
       if (cardContent.classList.contains('max-h-48')) {
         cardContent.classList.remove('max-h-48', 'overflow-hidden');
-        buttonText.textContent = 'Daha az göster';
+        buttonText.textContent =currentLang === 'en' ? 'Show less' : 'Daha az göster';
         buttonIcon.classList.remove('fa-arrow-down');
         buttonIcon.classList.add('fa-arrow-up');
       } else {
         cardContent.classList.add('max-h-48', 'overflow-hidden');
-        buttonText.textContent = 'Daha fazla göster';
+        buttonText.textContent =currentLang === 'en' ? 'Show more' : 'Daha fazla göster';
         buttonIcon.classList.remove('fa-arrow-up');
         buttonIcon.classList.add('fa-arrow-down');
       }
