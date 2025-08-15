@@ -1,25 +1,45 @@
-# Bio Sağlık Hizmetleri Web Sitesi
+# 💊 BioDs Sağlık Hizmetleri – Kurumsal Web Sitesi
 
-Bu proje, Bio Sağlık Hizmetleri'nın dijital kimliğini temsil eden, profesyonel ve modern bir web sitesidir. Kullanıcı dostu arayüzü sayesinde, müşterilerin hizmetler hakkında bilgi almasını, iletişim kurmasını ve randevu talep etmesini kolaylaştırır.
+BioDs Sağlık Hizmetleri web projesi; modern, kullanıcı dostu ve mobil uyumlu tasarımıyla sağlık sektöründe kurumsal tanıtım, ürün sunumu ve marka iş birliklerini etkili bir şekilde sergilemek için geliştirilmiştir.  
+**HTML**, **CSS(TAİLWİND)**, **JavaScript** ve **AOS** kütüphanesi ile zenginleştirilmiş çok dilli (Türkçe & İngilizce) bir yapıya sahiptir.
 
-## 🌟 Özellikler
+---
 
-- **Modern ve Duyarlı Tasarım:** Her cihazda (masaüstü, tablet, mobil) sorunsuz bir deneyim sunar.
-- **Hizmetler Bölümü:** Şirketin sunduğu tüm medikal hizmetlerin detaylı açıklamaları.
-- **Hakkımızda Sayfası:** Şirketin misyonu, vizyonu ve ekibi hakkında bilgiler.
-- **İletişim Formu:** Ziyaretçilerin doğrudan şirketle iletişime geçebileceği entegre bir form.
-- **SEO Uyumlu Yapı:** Arama motorları için optimize edilmiş, Google'da daha iyi görünürlük sağlar.
-- **Performans Optimizasyonu:** Hızlı yükleme süreleri ve akıcı bir kullanıcı deneyimi için optimize edilmiştir.
+## 🚀 Özellikler
 
-## 🚀 Teknolojiler
+- **Responsive Tasarım** – Tüm cihazlarda kusursuz görünüm  
+- **Çok Dilli Destek** – 🇹🇷 Türkçe & 🇬🇧 İngilizce içerik  
+- **Interaktif Ürün Kartları** – “Daha fazla göster” ile açılıp kapanan detaylı açıklamalar  
+- **Marka İş Birlikleri Marquee** – Otomatik kayan marka logoları  
+- **Modern UI/UX** – Tailwind CSS ile minimal ve şık görünüm  
+- **Animasyonlar** – AOS kütüphanesi ile scroll bazlı animasyonlar  
+- **Mobil Menü & Dil Seçici** – Kullanıcı dostu navigasyon  
+- **Scroll Indicator** – Ana sayfada yönlendirme göstergesi  
+- **Dinamik Header** – Scroll’a göre şeffaf/siyah geçiş  
 
-Bu projenin geliştirilmesinde kullanılan başlıca teknolojiler şunlardır:
+---
 
-- **HTML5:** Web sitesinin temel yapısı.
-- **CSS(Tailwind):** Modern ve düzenli stil oluşturma.
-- **JavaScript (ES6+):** Etkileşimli öğeler ve dinamik içerik için.
+## 🛠 Kullanılan Teknolojiler
 
-## 📋 Kullanım
+**HTML5** : Yapısal içerik oluşturma 
+**Tailwind CSS** :  Esnek ve hızlı stil tasarımı 
+**JavaScript (Vanilla)** :  Dinamik etkileşimler 
+**Font Awesome** : İkon setleri 
+**Google Fonts – Recursive** : Modern tipografi 
+**AOS (Animate On Scroll)**  : Scroll bazlı animasyonlar 
 
-https://biosaglikhizmetleri.com/
+---
 
+## 📸 Ekran Görüntüleri  
+
+<img width="1350" height="637" alt="image" src="https://github.com/user-attachments/assets/8e1d3a72-22f3-4fa5-83b8-2110c8bbd287" />
+
+## 📂 Proje Yapısı
+
+```plaintext
+.
+├── index.html        # Ana HTML dosyası
+├── app.js            # Dinamik işlevler ve etkileşimler
+├── output.css        # Tailwind CSS derlenmiş stiller
+├── medikal-asset/    # Görseller, logolar, ürün resimleri
+└── README.md         # Proje açıklamaları
