@@ -29,9 +29,7 @@ BioDs Sağlık Hizmetleri web projesi; modern, kullanıcı dostu ve mobil uyumlu
 
 ## 📸 Ekran Görüntüleri  
 
-<img width="1050" height="337" alt="image" src="https://github.com/user-attachments/assets/8e1d3a72-22f3-4fa5-83b8-2110c8bbd287" />  
-  
-<img width="1050" height="321" alt="image" src="https://github.com/user-attachments/assets/c622b5fb-cd7b-4fb0-8725-8ad0ec0f3684" />
+![Site Ekran Görüntüsü](https://github.com/user-attachments/assets/8e1d3a72-22f3-4fa5-83b8-2110c8bbd287)
 
 
 ## 📂 Proje Yapısı
