@@ -16,27 +16,39 @@ BioDs Sağlık Hizmetleri web projesi; modern, kullanıcı dostu ve mobil uyumlu
 - **Scroll Indicator** – Ana sayfada yönlendirme göstergesi  
 - **Dinamik Header** – Scroll’a göre şeffaf/siyah geçiş  
 
+## 🌐 Canlı Önizleme
 
+🔗 Siteyi Görüntüle ---> (https://www.biosaglikhizmetleri.com/)
+
+
+   
 ## 🛠 Kullanılan Teknolojiler
-
-**HTML5** : Yapısal içerik oluşturma 
-**Tailwind CSS** :  Esnek ve hızlı stil tasarımı 
-**JavaScript (Vanilla)** :  Dinamik etkileşimler 
-**Font Awesome** : İkon setleri 
-**Google Fonts – Recursive** : Modern tipografi 
-**AOS (Animate On Scroll)**  : Scroll bazlı animasyonlar 
-
-
+  
+**HTML5** : Yapısal içerik oluşturma   
+**Tailwind CSS** :  Esnek ve hızlı stil tasarımı   
+**JavaScript (Vanilla)** :  Dinamik etkileşimler   
+**Font Awesome** : İkon setleri   
+**Google Fonts – Recursive** : Modern tipografi   
+**AOS (Animate On Scroll)**  : Scroll bazlı animasyonlar   
+  
+ 
 ## 📸 Ekran Görüntüleri  
 
-![Site Ekran Görüntüsü](https://github.com/user-attachments/assets/8e1d3a72-22f3-4fa5-83b8-2110c8bbd287)
+**ANA SAYFA :** 
+![Ana Sayfa Ekran Görüntüsü](https://github.com/user-attachments/assets/8e1d3a72-22f3-4fa5-83b8-2110c8bbd287)
 
 
-## 📂 Proje Yapısı
+**KÜRESEL İŞBİRLİKLERİMİZ :**
+![Küresel İşbirliklerimiz Ekran Görüntüsü](https://github.com/user-attachments/assets/552012fa-27a8-41ff-ba38-f48820815a6f)
 
-.
-├── index.html        # Ana HTML dosyası
-├── app.js            # Dinamik işlevler ve etkileşimler
-├── output.css        # Tailwind CSS derlenmiş stiller
-├── medikal-asset/    # Görseller, logolar, ürün resimleri
-└── README.md         # Proje açıklamaları
+
+  
+  
+## 📂 Proje Yapısı  
+  
+.   
+├── index.html  
+├── app.js  
+├── output.css  
+├── medikal-asset/  
+└── README.md  
